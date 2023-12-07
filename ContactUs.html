@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CONTACT US</title>
+
+        <style>
+            body{
+                background-color: #1e1e1e;
+                font-family: Arial, sans-serif;
+            }
+            .container{
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            form{
+                background-color: #f5f5f5;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            input[type="text"], textarea{
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                background-color: #f5f5f5;
+                color: #6b1a1a;
+
+            }
+            .header{
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+
+
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>About Us</h1>
+            <p>Here are some of our events!</p>
+        </div>
+
+        <div class="container">
+            <form id="myForm">
+                <label>Name:</label>
+                <input type="text" id="name">
+                <div class="error-message" id="nameError"></div>
+
+                <label>LastName:</label>
+                <input type="text" id="lastname">
+                <div class="error-message" id="lastnameError"></div>
+            
+                <label>Email:</label>
+                <input type="text" id="email">
+                <div class="error-message" id="emailError"></div>
+
+                <label>Subject:</label>
+                <textarea id="subject" name="subject" placeholder="Write something here..." style="height: 200px"></textarea>
+
+            
+                <button type="button" onclick="validateForm()">Submit</button>
+            </form>
+            <script>
+                let nameRegex = /^[A-Z][a-z]{3,8}$/;
+                let lastnameRegex = /^[A-Z][a-z]{3,8}$/;
+                let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+            
+                function validateForm(){
+                    let nameInput = document.getElementById('name');
+                    let nameError = document.getElementById('nameError');
+                    let lastnameInput = document.getElementById('lastname');
+                    let lastnameError = document.getElementById('lastnameerror');
+                    let emailInput = document.getElementById('email');
+                    let emailError = document.getElementById('emailError');
+            
+                    nameError.innerText = '';
+                    lastname.innerText = ' ';
+                    emailError.innerText = '';
+            
+                    if(!nameRegex.test(nameInput.value)){
+                        nameError.innerText = 'invalid name';
+                        return;
+                    }
+                    if(!lastnameRegex.test(lastnameInput.value)){
+                        lastnameError.innerTest = 'invalid last name';
+                        return;
+                    }
+                    if(!emailRegex.test(emailInput.value)){
+                        emailError.innerText = 'invalid email';
+                        return;
+                    }
+            
+                    alert('form submitted succesfully!');
+                }
+            </script>
+        </div>
+    </body>
+</html>
