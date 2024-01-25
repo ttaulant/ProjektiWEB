@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  $hide="";
+  if(!isset($_SESSION['username']))
+    header("location:login.php");
+  else{
+    if($_SESSION['role'] == "admin")
+      $hide = "";
+    else
+      $hide = "hide";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,7 +19,12 @@
         <body>
 
         <?php include 'header.php';?>
-            
+        <h3><?php echo "Username: ".$_SESSION['username']."<br>" ?></h3>
+    <h3><?php echo "Login Time: ".$_SESSION['loginTime']."<br>"?></h3>
+
+    <?php
+        }
+    ?> 
             <!--Add more article from database later -->
             <article class="news-article">
                 <img src="path/to/your/photo.jpg" alt="">

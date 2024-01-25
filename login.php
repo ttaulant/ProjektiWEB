@@ -8,8 +8,6 @@
     </head>
     <body>
 
-        <?php include 'header.php';?>
-
         <div class="loginMain">
             <form id="loginForm" action="validate.php" method="post">
                 

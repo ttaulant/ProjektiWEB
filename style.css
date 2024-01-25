@@ -150,6 +150,10 @@ input[type="text"], textarea{
 
 }
 
+.hide{
+    display:none;
+}
+
 #loginButton {
 
 background-color: #7394e9;

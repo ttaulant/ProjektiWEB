@@ -4,8 +4,8 @@
     <ul class="navbar">
         <li><a href="index.php" >Home</a></li>
         <li><a href="about.php">About Us</a></li>   
-        <li><a href="login.php">Log In</a></li> 
         <li><a href="news.php">News</a></li>  
         <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="logout.php">Log out</a></li>
     </ul>
 </div>
