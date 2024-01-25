@@ -4,120 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Event</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-
-        ul.navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px;
-            background-color: black;
-            overflow: hidden;
-            border: 20px                    
-        }
-        
-        ul.navbar li {
-            float:left;
-            font-size: 20px;
-        }
-        
-        ul.navbar li a {
-            display: block;
-            color: white; 
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration:solid;
-        }
-        
-        ul.navbar li a:hover {
-            background-color: #215bad;         
-                    
-        }      
-            
-        
-        body {
-            font-family:'Times New Roman', Times, serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .header {
-            background-image: linear-gradient(rgb(74, 121, 163) ,rgb(30, 88, 147));
-            color: black;
-            text-align: center; 
-            padding: 40px;
-            text-shadow:2px 2px 4px #555;
-                   
-        }
-                
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-                    
-        }
-        
-         .event-card {
-            background-color:white ;
-            border: 5px solid #333;
-            border-radius: 30px;
-            margin: 10px;
-            padding: 20px;
-            width: 400px;
-            box-shadow: 30px 25px 35px rgba(0, 0, 0, 0.2);
-
-                    
-        }
-        
-        .event-card img {
-             max-width: 100%;
-            height: auto;
-            width: 400px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 16px 16px 0 0;
-        }
-        
-        .event-details {
-             margin-top: 10px;
-             display: flex;
-             flex-direction: column;
-             gap: 4px;
-                }
-        
-        .footer{
-            background-color: rgb(77, 121, 164);
-            color: #ddd;   
-            justify-content: space-evenly;
-            font-size: 30px;
-        }
-        
-        .Socials{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-             align-items: center;
-            color: black;
-                    
-        }
-                
-            </style>
 
 
-    <div class="header">
-        <h1 style ="font-size: 100px; color:#000000;">Animal Event</h1>
-        <p>Join us for an exciting animal event!</p>
-        <ul class="navbar">
-            <li><a href="about.html">About Us</a></li>   
-            <li><a href="login.html">Log In</a></li> 
-            <li><a href="news.html">News</a></li>  
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
+
+    <?php include 'header.php';?>
 
     <div class="container">
         

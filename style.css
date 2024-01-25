@@ -1,0 +1,302 @@
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    overflow: hidden;
+    border: 20px                    
+}
+
+ul.navbar li {
+    float:left;
+    font-size: 20px;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:solid;
+}
+
+ul.navbar li a:hover {
+    background-color: #215bad;         
+            
+}      
+    
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: linear-gradient(rgb(74, 121, 163) ,rgb(30, 88, 147));
+    color: black;
+    text-align: center; 
+    padding: 40px;
+    text-shadow:2px 2px 4px #555;
+           
+}
+        
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+            
+}
+
+ .event-card {
+    background-color:white ;
+    border: 5px solid #333;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 30px 25px 35px rgba(0, 0, 0, 0.2);
+
+            
+}
+
+.event-card img {
+     max-width: 100%;
+    height: auto;
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.event-details {
+     margin-top: 10px;
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+        }
+
+.footer{
+    background-color: rgb(77, 121, 164);
+    color: #ddd;   
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
+.Socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     align-items: center;
+    color: black;
+            
+}
+
+.loginMain {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#loginform {
+    width: 300px;
+    margin: 0 auto;
+    color: #ffffff;
+    size: 15px;
+    background-color: rgba(136, 149, 170, 0.8); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 10px rgba(206, 194, 194, 0.8); 
+    backdrop-filter: blur(10px);
+}
+
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+.contactContainer{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+#contactForm{
+    background-color:rgb(77, 121, 164);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 60px 10px 25px rgba(0, 0, 0, 0.2);
+
+}
+input[type="text"], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #6b1a1a;
+
+}
+
+#loginButton {
+
+background-color: #7394e9;
+color: #000000;
+cursor: pointer;
+width: 75px;
+height: 25px;
+}
+
+*{box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}   
+
+
+.text {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+*{box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+
+}
+
+.error {
+    color: red;
+}

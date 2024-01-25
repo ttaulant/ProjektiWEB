@@ -2,73 +2,14 @@
 <html>
     <head>
         <title>CONTACT US</title>
-
-        <style>
-            body{
-                background-color: rgb(255, 255, 255);
-                font-family: Arial, sans-serif;
-                padding: 20px;
-            }
-            .container{
-                width: 100%;
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-                box-sizing: border-box;
-
-            }
-            form{
-                background-color:rgb(77, 121, 164);
-                padding: 20px;
-                border-radius: 25px;
-                box-shadow: 60px 10px 25px rgba(0, 0, 0, 0.2);
-
-            }
-            input[type="text"], textarea{
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #000000;
-                border-radius: 4px;
-                margin: 8px 0;
-                box-sizing: border-box;
-                background-color: #f5f5f5;
-                color: #6b1a1a;
-
-            }
-            .header{
-                background-color:rgb(77, 121, 164);
-                color: #000000;
-                text-align: center;
-                padding: 30px;
-                font-size: 20px;
-            }
-            button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        </style>
-
-
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-        <div class="header">
-            <h1>Contact Us</h1>
-            <p>Feel free to contact us for any question or complaints!</p>
-            <ul class="navbar">
-                <li><a href="about.html">About Us</a></li>   
-                <li><a href="login.html">Log In</a></li> 
-                <li><a href="news.html">News</a></li>  
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
+    <?php include 'header.php';?>
 
-        <div class="container">
-            <form id="myForm">
+        <div class="contactContainer">
+            <form id="contactForm">
                 <label>Name:</label>
                 <input type="text" id="name">
                 <div class="error-message" id="nameError"></div>

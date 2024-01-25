@@ -2,51 +2,12 @@
 <html>
     <head>
         <title>News</title>
-        
-        <style>
-            .header {
-                background-image: linear-gradient(rgb(74, 121, 163) ,rgb(30, 88, 147));
-                color: black;
-                text-align: center; 
-                padding: 40px;
-                text-shadow:2px 2px 4px #555;
-                   
-            }
-            body {
-                font-family:'Times New Roman', Times, serif;
-                background-color: #f0f0f0;
-                margin: 0;
-                padding: 0;
-            }
-            .footer{
-                background-color: rgb(77, 121, 164);
-                color: #ddd;   
-                justify-content: space-evenly;
-                font-size: 30px;
-            }
-        
-            .Socials{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: black;      
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
 
         <body>
 
-            <div class="header">
-                <h1>Ani/News</h1>
-                <p>Keep updated with whats happening here!!</p>
-                <ul class="navbar">
-                    <li><a href="about.html">About Us</a></li>   
-                    <li><a href="login.html">Log In</a></li> 
-                    <li><a href="news.html">News</a></li>  
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
+        <?php include 'header.php';?>
             
             <!--Add more article from database later -->
             <article class="news-article">
