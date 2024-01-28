@@ -6,10 +6,8 @@
         
         </head>
             <body>
-
+            
             <?php include 'header.php';?>
-
-
                 <form id="signupForm">
                     <div class="form-control">
                         <label for="username">First Name:</label>
@@ -32,8 +30,6 @@
                         <input type="password" id="password" name="password" required>
                     </div>
 
-
-  
                     <div class="button">
                         <button type="submit"><a href="MainPage.html">Sign Up</a></button>
                     </div>

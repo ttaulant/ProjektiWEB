@@ -10,7 +10,7 @@
 
         <div class="loginMain">
             <form id="loginForm" action="validate.php" method="post">
-                
+                    <h2> Welcome </h2>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
                     <label for="password">Password:</label>
