@@ -2,7 +2,7 @@ ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 10px;
-    background-color: black;
+    background-color:black;
     overflow: hidden;
     border: 20px                    
 }
@@ -113,12 +113,16 @@ body {
 
 }
 
-.loginMain h2 {
+.loginMain h1 {
     text-align: center;
     color:#7394e9;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
+}
+
+.loginMain i{
+    color:#7394e9;
 }
 
 #loginform {
@@ -181,9 +185,8 @@ color: #000000;
 cursor: pointer;
 width: 75px;
 height: 25px;
+border-radius: 5px;
 }
-
-
 *{box-sizing:border-box}
 
 .slideshow-container {
@@ -315,12 +318,28 @@ height: 25px;
     to {opacity: 1}
 }
 
+
+.signupMain{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    margin:0 auto;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: hsl(190, 56%, 92%);
+    padding: 20px;
+    text-align: center;
+}
+
 .form-control {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
 }
-
 .error {
     color: red;
 }

@@ -8,6 +8,7 @@
             <body>
             
             <?php include 'header.php';?>
+            <div class = "signupMain">
                 <form id="signupForm">
                     <div class="form-control">
                         <label for="username">First Name:</label>
@@ -35,7 +36,7 @@
                     </div>
 
                 </form>
-
+                </div>
                     <p class="error" id="error"></p>
 
                 <script>
