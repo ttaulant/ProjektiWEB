@@ -8,6 +8,12 @@
       $hide = "";
     else
       $hide = "hide";
+
+  include "DatabaseConnection.php";
+  include_once "EventRepo.php";
+
+  $eventRepo = new EventRepo();
+  $events = $eventRepo->getAllEvents();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,15 +38,7 @@
         
     <div class="container">
 
-    <?php 
-        include_once('connection.php');
-        $stmt = $conn->prepare("SELECT * FROM event");
-        $stmt->execute();
-        $events = $stmt->fetchAll();
-        
-        foreach($events as $event) {
-        ?>
-        
+    <?php foreach($events as $event) { ?>
         <div class="event-card">
             <img src=<?php echo "Photos/".$event['image']?> alt="Event 1">
             <h2><?php echo $event['title']?></h2>
@@ -49,9 +47,9 @@
             <p class="event-details"><?php echo "Description: ".$event['description']?></p>
         </div>
 
-        <?php
+    <?php
         }
-        ?>
+    ?>
         
     </div>
 

@@ -1,6 +1,10 @@
 <?php 
 
-include "connection.php";
+include "DatabaseConnection.php";
+include_once "EventRepo.php";
+
+$eventRepo = new EventRepo();
+$events = $eventRepo->getAllEvents();
 
 ?>
 
@@ -132,11 +136,6 @@ include "connection.php";
             <div class="option">Events / News</div>
         </div>
         
-        <div class="top-buttons">
-            <button class="edit-button">Edit</button>
-            <button class="delete-button">Delete</button>
-        </div>
-        
 
         <table>
             <thead>
@@ -151,20 +150,20 @@ include "connection.php";
             <tbody>
             <?php foreach($events as $event) { ?>
                     <tr>
-                        <td></td>
+                        <td><?php echo $event['title'];?></td>
                         <td><?php echo $event['date'];?></td>
                         <td><?php echo $event['location'];?></td>
                         <td><?php echo $event['description'];?></td>
-                        <td><?php echo $evnet['image'];?></td>
-                        <td><a href='edit.php?id=<?php echo $event['event_ID']?>'>Edit</a></td> <!--e dergojme id ne url permes pjeses ?id= dhe permes kodit ne php e marrim nga studenti i cili eshte i paraqitur ne kete rresht-->
-                        <td><a href='delete.php?id=<?php echo $event['event_ID']?>'>Delete</a></td>
+                        <td><?php echo $event['image'];?></td>
+                        <td><a href='edit.php?id=<?php echo $event['id']?>'>Edit</a></td>
+                        <td><a href='delete.php?id=<?php echo $event['id']?>'>Delete</a></td>
                     </tr>
                 <?php }?> 
             </tbody>
         </table>
 
         <div class="bottom-button">
-            <button class="insert-button">Insert</button>
+            <button class="insert-button"><a href='insert.php'>Insert</a></button>
         </div>
     </div>
 </body>
