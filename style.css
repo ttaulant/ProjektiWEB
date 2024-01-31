@@ -59,8 +59,6 @@ body {
     padding: 20px;
     width: 400px;
     box-shadow: 30px 25px 35px rgba(0, 0, 0, 0.2);
-
-            
 }
 
 .event-card img {
@@ -71,7 +69,6 @@ body {
     object-fit: cover;
     border-radius: 16px 16px 0 0;
 }
-
 .event-details {
      margin-top: 10px;
      display: flex;
@@ -109,16 +106,13 @@ body {
     background-color: hsl(190, 56%, 92%);
     padding: 20px;
     text-align: center;
-    
-
 }
 
 .loginMain h1 {
     text-align: center;
     color:#7394e9;
     font-size: 40px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
 }
 
 .loginMain i{
@@ -136,9 +130,6 @@ body {
     box-shadow: 0 0 10px 10px rgba(206, 194, 194, 0.8); 
     backdrop-filter: blur(10px);
 }
-
-
-
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -344,3 +335,60 @@ border-radius: 5px;
     color: red;
 }
 
+.main-container { 
+    display: flex; 
+    width: 100vw; 
+    position: relative; 
+    top: 70px; 
+    z-index: 1; 
+    padding: 40px 30px 30px 30px; 
+  } 
+
+ 
+.upper-container { 
+    display: flex; 
+    justify-content: space-evenly; 
+
+    flex-wrap: wrap; 
+    gap: 50px; 
+  } 
+
+  .topic-heading { 
+    font-size: 30px; 
+    letter-spacing: 3px; 
+  }
+  .box1 { 
+    height: 130px; 
+    width: 230px; 
+    border-radius: 10px; 
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751); 
+    padding: 20px; 
+    display: flex; 
+    align-items: left; 
+    justify-content: space-around; 
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+    
+  }
+  .box2 { 
+    height: 130px; 
+    width: 230px; 
+    border-radius: 50px; 
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751); 
+    padding: 20px; 
+    display: flex; 
+    align-items: right; 
+    justify-content: space-around; 
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+  }
+
+  .box2:hover { 
+    transform: scale(1.08); 
+  }
+  .box1 .text { 
+    color: black;
+  }
+  .box2 .text { 
+    color: black;
+  }
