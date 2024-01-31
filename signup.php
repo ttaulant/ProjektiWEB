@@ -32,9 +32,8 @@
                     </div>
 
                     <div class="button">
-                        <button type="submit"><a href="MainPage.html">Sign Up</a></button>
+                        <button type="submit"><a href="index.php">Sign Up</a></button>
                     </div>
-
                 </form>
                 </div>
                     <p class="error" id="error"></p>
