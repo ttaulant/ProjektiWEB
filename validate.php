@@ -1,6 +1,10 @@
 <?php
 
-include_once('connection.php');
+include "DatabaseConnection.php";
+include_once "UserRepo.php";
+
+$userRepo = new UserRepo();
+$users = $userRepo->getAllUsers();
 
 function test_input($data){
 
@@ -14,9 +18,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $username = test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
-    $stmt = $conn->prepare("SELECT * FROM user");
-    $stmt->execute();
-    $users = $stmt->fetchAll();
 
     foreach($users as $user) {
          

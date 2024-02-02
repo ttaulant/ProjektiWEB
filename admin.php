@@ -1,11 +1,22 @@
-<?php 
+<?php
 
 include "DatabaseConnection.php";
+include_once "UserRepo.php";
 include_once "EventRepo.php";
 
+$userRepo = new UserRepo();
+$users = $userRepo->getAllUsers();
 $eventRepo = new EventRepo();
 $events = $eventRepo->getAllEvents();
 
+session_start();
+  $hide="";
+  if(!isset($_SESSION['username']))
+    header("location:login.php");
+  else{
+    if($_SESSION['role'] != "admin")
+      header("location:index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -131,12 +142,56 @@ $events = $eventRepo->getAllEvents();
         <div id="profile">User Profile</div>
     </div>
 
+    <ul class="navbar">
+            <div class="leftnav">
+            <li><a href="index.php" >Home</a></li>
+        </div>
+
+        <div class="rightnav">
+            <li><a href="logout.php">Log out</a></li>
+        </div>
+        </ul>
+
     <div id="content">
         <div id="options">
-            <div class="option">Events / News</div>
+            <div class="option">Users/ Events</div>
         </div>
-        
 
+
+        <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($users as $user) { ?>
+                        <tr>
+                            <td><?php echo $user['name'];?></td>
+                            <td><?php echo $user['surname'];?></td>
+                            <td><?php echo $user['email'];?></td>
+                            <td><?php echo $user['username'];?></td>
+                            <td><?php echo $user['password'];?></td>
+                            <td><?php echo $user['role'];?></td>
+                            <td><a href='editUser.php?id=<?php echo $user['id']?>'>Edit</a></td>
+                            <td><a href='deleteUser.php?id=<?php echo $user['id']?>'>Delete</a></td>
+                        </tr>
+                <?php }?>
+            </tbody>
+        </table>
+
+        <div class="bottom-button">
+            <button class="insert-button"><a href='insertUser.php'>Insert User</a></button>
+        </div>
+        </div>
+
+        <div>
         <table>
             <thead>
             <tr>
@@ -155,16 +210,18 @@ $events = $eventRepo->getAllEvents();
                         <td><?php echo $event['location'];?></td>
                         <td><?php echo $event['description'];?></td>
                         <td><?php echo $event['image'];?></td>
-                        <td><a href='edit.php?id=<?php echo $event['id']?>'>Edit</a></td>
-                        <td><a href='delete.php?id=<?php echo $event['id']?>'>Delete</a></td>
+                        <td><a href='editEvent.php?id=<?php echo $event['id']?>'>Edit</a></td>
+                        <td><a href='deleteEvent.php?id=<?php echo $event['id']?>'>Delete</a></td>
                     </tr>
-                <?php }?> 
+                <?php }?>
             </tbody>
         </table>
 
         <div class="bottom-button">
-            <button class="insert-button"><a href='insert.php'>Insert</a></button>
+            <button class="insert-button"><a href='insertEvent.php'>Insert Event</a></button>
         </div>
+        </div>
+
     </div>
 </body>
 </html>

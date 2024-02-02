@@ -11,6 +11,7 @@
     
     <div class="rightnav">
         <li><a href="logout.php">Log out</a></li>
+        <li><a href="admin.php" style="color: grey;">Admin Dashboard</a></li>
     </div>
     </ul>
 </div>

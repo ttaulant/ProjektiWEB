@@ -1,3 +1,22 @@
+<?php
+include_once 'user.php';
+include_once 'UserRepo.php';
+
+if (isset($_POST['submitbtn'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $role = "user";
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $email = $_POST['email'];
+
+    $user = new User($username,$password,$role,$name,$surname,$email);
+
+    $userRepo = new UserRepo();
+    $userRepo->insertUser($user);
+    header("location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,23 +25,27 @@
         
         </head>
             <body>
-            
-            <?php include 'header.php';?>
+
             <div class = "signupMain">
-                <form id="signupForm">
+                <form id="signupForm" action="<?php echo $SERVER['PHP_SELF']?>" method="post">
                     <div class="form-control">
-                        <label for="username">First Name:</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="name">First Name:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
 
                     <div class="form-control">
-                        <label for="username">Last Name:</label>
-                        <input type="text" id="username" name="username" required>
+                        <label for="surname">Last Name:</label>
+                        <input type="text" id="surname" name="surname" required>
                     </div>
        
       
                     <div class="form-control">
-                        <label for="username">Email:</label>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="username">Last Name:</label>
                         <input type="text" id="username" name="username" required>
                     </div>
   
@@ -32,7 +55,7 @@
                     </div>
 
                     <div class="button">
-                        <button type="submit"><a href="index.php">Sign Up</a></button>
+                        <input type="submit" name="submitbtn" value="Sign Up">
                     </div>
                 </form>
                 </div>
