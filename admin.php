@@ -137,7 +137,7 @@ session_start();
     
     <div id="sidebar">
         <div id="user-photo">
-            <img src="your-user-photo-url.jpg" alt="User Photo">
+            <img src="Photos/user.jpg" alt="User Photo">
         </div>
         <div id="profile">User Profile</div>
     </div>
