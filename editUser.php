@@ -11,7 +11,7 @@ $user = $userRepo->getUserById($id);
 <html>
 <body>
     <h3>Edit User</h3>
-    <form action="<?php echo $SERVER['PHP_SELF']?>" method="post">
+    <form action="<?php echo $SERVER['PHP_SELF']?>" method="POST">
         <input type="text" name="name"  value="<?php echo $user['name']?>"> <br> <br>
         <input type="text" name="surname"  value="<?php echo $user['surname']?>"> <br> <br>
         <input type="email" name="email"  value="<?php echo $user['email']?>"> <br> <br>

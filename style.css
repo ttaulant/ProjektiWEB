@@ -21,7 +21,6 @@ ul.navbar li a {
 }
 ul.navbar li a:hover {
     background-color: #215bad;         
-            
 }      
 .rightnav{
     display: flex;
@@ -326,7 +325,6 @@ border-radius: 5px;
     padding: 20px;
     text-align: center;
 }
-
 .form-control {
     width: 100%;
     padding: 10px;
@@ -335,7 +333,6 @@ border-radius: 5px;
 .error {
     color: red;
 }
-
 .main-container { 
     display: flex; 
     width: 100vw; 
@@ -344,8 +341,6 @@ border-radius: 5px;
     z-index: 1; 
     padding: 40px 30px 30px 30px; 
   } 
-
- 
 .upper-container { 
     display: flex; 
     justify-content: space-evenly; 

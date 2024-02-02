@@ -27,7 +27,7 @@ if (isset($_POST['submitbtn'])) {
             <body>
 
             <div class = "signupMain">
-                <form id="signupForm" action="<?php echo $SERVER['PHP_SELF']?>" method="post">
+                <form id="signupForm" action="<?php echo $SERVER['PHP_SELF']?>" method="POST">
                     <div class="form-control">
                         <label for="name">First Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -37,18 +37,10 @@ if (isset($_POST['submitbtn'])) {
                         <label for="surname">Last Name:</label>
                         <input type="text" id="surname" name="surname" required>
                     </div>
-       
-      
                     <div class="form-control">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-
-                    <div class="form-control">
-                        <label for="username">Last Name:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-  
                     <div class="form-control">
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required>

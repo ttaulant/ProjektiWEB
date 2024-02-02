@@ -11,7 +11,7 @@ $event = $eventRepo->getEventById($id);
 <html>
 <body>
     <h3>Edit Event</h3>
-    <form action="<?php echo $SERVER['PHP_SELF']?>" method="post">
+    <form action="<?php echo $SERVER['PHP_SELF']?>" method="POST">
         <input type="text" name="title"  value="<?php echo $event['title']?>"> <br> <br>
         <input type="date" name="date"  value="<?php echo $event['date']?>"> <br> <br>
         <input type="text" name="location"  value="<?php echo $event['location']?>"> <br> <br>
