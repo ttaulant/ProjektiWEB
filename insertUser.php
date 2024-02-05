@@ -23,7 +23,7 @@ if (isset($_POST['submitbtn'])) {
     <head>
     </head>
     <body>
-        <form action="<?php echo $SERVER['PHP_SELF']?>" method="POST">  
+        <form method="POST">  
             Name: <input type="text" name="name" ><br>
             Surname: <input type="text" name="surname" ><br>
             Email: <input type="text" name="email" ><br>
